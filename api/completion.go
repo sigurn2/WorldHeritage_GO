@@ -40,7 +40,8 @@ func getCompletion(q string) string {
 		},
 	)
 	if err != nil {
-		fmt.Printf("ChatCompletion error: %v\n", err)
+		fmt.Printf("ERROR MESSAGE: %v\n", err)
+		panic(err)
 	}
 	return resp.Choices[0].Message.Content
 }
